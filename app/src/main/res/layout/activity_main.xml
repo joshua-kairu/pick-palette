@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+ Pick Palette
+
+ Tutorial on how to use the Android Palette
+
+ Copyright (C) 2016 Kairu Joshua Wambugu
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see http://www.gnu.org/licenses/.
+
+ -->
+
+<android.support.design.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    >
+
+    <!--
+
+    android:fitsSystemWindows="true"
+    Boolean internal attribute to adjust view layout based on system windows such as status bar.
+    If true, adjusts the padding of this view to leave space for the system windows.
+
+    -->
+    <android.support.design.widget.AppBarLayout
+
+        android:id="@+id/am_abl"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="56dp"
+
+        android:fitsSystemWindows="true"
+
+        android:background="?colorPrimary"
+
+        >
+
+        <android.support.v7.widget.Toolbar
+
+            android:id="@+id/am_tb"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="?actionBarSize"
+
+            app:navigationIcon="@drawable/ic_menu"
+
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/am_rl_fragment"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:paddingTop="@dimen/activity_horizontal_margin"
+
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+
+        android:paddingRight="@dimen/activity_horizontal_margin"
+
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        >
+
+        <ImageView
+
+            android:id="@+id/am_iv"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="200dp"
+
+            android:background="@android:color/darker_gray"
+
+            android:layout_marginTop="8dp"
+
+            android:layout_marginBottom="8dp"
+
+            />
+
+        <TextView
+
+            android:layout_below="@+id/am_iv"
+
+            android:id="@+id/am_tv_colorTitle"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:text="Color Information"
+
+            android:layout_marginBottom="8dp"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+
+            />
+
+        <GridView
+
+            android:layout_below="@id/am_tv_colorTitle"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:id="@+id/am_gv"
+
+            android:numColumns="auto_fit"
+
+            />
+
+    </RelativeLayout>
+
+    <!-- A FAB -->
+
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/am_fab"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_margin="16dp"
+
+        app:srcCompat="@drawable/fab_plus"
+
+        app:elevation="6dp"
+
+        app:fabSize="normal"
+
+        app:pressedTranslationZ="12dp"
+
+        app:layout_anchor="@id/am_rl_fragment"
+
+        app:borderWidth="0dp"
+
+        app:layout_anchorGravity="bottom|right|end"
+
+        />
+
+</android.support.design.widget.CoordinatorLayout>
