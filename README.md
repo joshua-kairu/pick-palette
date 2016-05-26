@@ -46,7 +46,7 @@ This app can:
 ## Limitations :worried:
 
 This app was just a tutorial. It cannot:
-* Highlight the locations of each of the pixels of the major 
+* highlight the locations of each of the pixels of the major 
 
 ## Possible Future Work :fast_forward:
 
